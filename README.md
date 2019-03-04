@@ -4,7 +4,7 @@ Author: Nikolay Tretyakov
 
 ## Initial Data
 
-This dataset is derived from the [Named Link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones ""Human Activity Recognition Using Smartphones Data Set"").
+This dataset is derived from the ["Human Activity Recognition Using Smartphones Data Set"](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones/ "Human Activity Recognition Using Smartphones Data Set").
 
 ## Task Description
 
