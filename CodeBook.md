@@ -54,92 +54,90 @@ File tidy_data.txt is a dataset which contains 180 raws and 81 columns. The set 
 *mean(): mean value
 *std(): standard deviation
 
-Dplyr package provides the following overview of this dataset:
+### Resulted Measurements
 
-activity   subject TimeDomain_Body_Ac~ TimeDomain_Body_A~ TimeDomain_Body_A~ TimeDomain_Body_Ac~
-   <fct>      <fct>                 <dbl>              <dbl>              <dbl>               <dbl>
- 1 WALKING    1                     0.277           -0.0174             -0.111              -0.284 
- 2 WALKING_U~ 1                     0.255           -0.0240             -0.0973             -0.355 
- 3 WALKING_D~ 1                     0.289           -0.00992            -0.108               0.0300
- 4 SITTING    1                     0.261           -0.00131            -0.105              -0.977 
- 5 STANDING   1                     0.279           -0.0161             -0.111              -0.996 
- 6 LAYING     1                     0.222           -0.0405             -0.113              -0.928 
- 7 WALKING    2                     0.276           -0.0186             -0.106              -0.424 
- 8 WALKING_U~ 2                     0.247           -0.0214             -0.153              -0.304 
- 9 WALKING_D~ 2                     0.278           -0.0227             -0.117               0.0464
-10 SITTING    2                     0.277           -0.0157             -0.109              -0.987 
-# ... with 170 more rows, and 75 more variables:
-#   TimeDomain_Body_Accelerometer_StandardDeviation_Y <dbl>,
-#   TimeDomain_Body_Accelerometer_StandardDeviation_Z <dbl>,
-#   TimeDomain_Gravity_Accelerometer_Mean_X <dbl>, TimeDomain_Gravity_Accelerometer_Mean_Y <dbl>,
-#   TimeDomain_Gravity_Accelerometer_Mean_Z <dbl>,
-#   TimeDomain_Gravity_Accelerometer_StandardDeviation_X <dbl>,
-#   TimeDomain_Gravity_Accelerometer_StandardDeviation_Y <dbl>,
-#   TimeDomain_Gravity_Accelerometer_StandardDeviation_Z <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_Mean_X <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_Mean_Y <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_Mean_Z <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_StandardDeviation_X <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_StandardDeviation_Y <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_StandardDeviation_Z <dbl>,
-#   TimeDomain_Body_Gyroscope_Mean_X <dbl>, TimeDomain_Body_Gyroscope_Mean_Y <dbl>,
-#   TimeDomain_Body_Gyroscope_Mean_Z <dbl>, TimeDomain_Body_Gyroscope_StandardDeviation_X <dbl>,
-#   TimeDomain_Body_Gyroscope_StandardDeviation_Y <dbl>,
-#   TimeDomain_Body_Gyroscope_StandardDeviation_Z <dbl>,
-#   TimeDomain_Body_AngularAcceleration_Mean_X <dbl>,
-#   TimeDomain_Body_AngularAcceleration_Mean_Y <dbl>,
-#   TimeDomain_Body_AngularAcceleration_Mean_Z <dbl>,
-#   TimeDomain_Body_AngularAcceleration_StandardDeviation_X <dbl>,
-#   TimeDomain_Body_AngularAcceleration_StandardDeviation_Y <dbl>,
-#   TimeDomain_Body_AngularAcceleration_StandardDeviation_Z <dbl>,
-#   TimeDomain_Body_Accelerometer_Magnitude_Mean <dbl>,
-#   TimeDomain_Body_Accelerometer_Magnitude_StandardDeviation <dbl>,
-#   TimeDomain_Gravity_Accelerometer_Magnitude_Mean <dbl>,
-#   TimeDomain_Gravity_Accelerometer_Magnitude_StandardDeviation <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_Magnitude_Mean <dbl>,
-#   TimeDomain_Body_Accelerometer_Jerk_Magnitude_StandardDeviation <dbl>,
-#   TimeDomain_Body_Gyroscope_Magnitude_Mean <dbl>,
-#   TimeDomain_Body_Gyroscope_Magnitude_StandardDeviation <dbl>,
-#   TimeDomain_Body_AngularAcceleration_Magnitude_Mean <dbl>,
-#   TimeDomain_Body_AngularAcceleration_Magnitude_StandardDeviation <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_StandardDeviation_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_StandardDeviation_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_StandardDeviation_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_Freq_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_Freq_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Mean_Freq_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_StandardDeviation_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_StandardDeviation_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_StandardDeviation_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_Freq_X <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_Freq_Y <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Jerk_Mean_Freq_Z <dbl>,
-#   FrequencyDomain_Body_Gyroscope_Mean_X <dbl>, FrequencyDomain_Body_Gyroscope_Mean_Y <dbl>,
-#   FrequencyDomain_Body_Gyroscope_Mean_Z <dbl>,
-#   FrequencyDomain_Body_Gyroscope_StandardDeviation_X <dbl>,
-#   FrequencyDomain_Body_Gyroscope_StandardDeviation_Y <dbl>,
-#   FrequencyDomain_Body_Gyroscope_StandardDeviation_Z <dbl>,
-#   FrequencyDomain_Body_Gyroscope_Mean_Freq_X <dbl>,
-#   FrequencyDomain_Body_Gyroscope_Mean_Freq_Y <dbl>,
-#   FrequencyDomain_Body_Gyroscope_Mean_Freq_Z <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Magnitude_Mean <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Magnitude_StandardDeviation <dbl>,
-#   FrequencyDomain_Body_Accelerometer_Magnitude_Mean_Frequency <dbl>,
-#   FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_Mean <dbl>,
-#   FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_StandardDeviation <dbl>,
-#   FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_Mean_Frequency <dbl>,
-#   FrequencyDomain_BodyBody_Gyroscope_Magnitude_Mean <dbl>,
-#   FrequencyDomain_BodyBody_Gyroscope_Magnitude_StandardDeviation <dbl>,
-#   FrequencyDomain_BodyBody_Gyroscope_Magnitude_Mean_Frequency <dbl>,
-#   FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_Mean <dbl>,
-#   FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_StandardDeviation <dbl>,
-#   FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_Mean_Frequency <dbl>
+A list of mean and standard deviation measurements:
 
-Note: features are normalized and bounded within [-1,1]. 
+ [1] "activity"                                                          
+ [2] "subject"                                                           
+ [3] "tBody_Accelerometer_-_Mean_-X"                                     
+ [4] "tBody_Accelerometer_-_Mean_-Y"                                     
+ [5] "tBody_Accelerometer_-_Mean_-Z"                                     
+ [6] "tBody_Accelerometer_-std-X"                                        
+ [7] "tBody_Accelerometer_-std-Y"                                        
+ [8] "tBody_Accelerometer_-std-Z"                                        
+ [9] "tGravity_Accelerometer_-_Mean_-X"                                  
+[10] "tGravity_Accelerometer_-_Mean_-Y"                                  
+[11] "tGravity_Accelerometer_-_Mean_-Z"                                  
+[12] "tGravity_Accelerometer_-std-X"                                     
+[13] "tGravity_Accelerometer_-std-Y"                                     
+[14] "tGravity_Accelerometer_-std-Z"                                     
+[15] "tBody_Accelerometer_Jerk-_Mean_-X"                                 
+[16] "tBody_Accelerometer_Jerk-_Mean_-Y"                                 
+[17] "tBody_Accelerometer_Jerk-_Mean_-Z"                                 
+[18] "tBody_Accelerometer_Jerk-std-X"                                    
+[19] "tBody_Accelerometer_Jerk-std-Y"                                    
+[20] "tBody_Accelerometer_Jerk-std-Z"                                    
+[21] "tBody_Gyroscope_-_Mean_-X"                                         
+[22] "tBody_Gyroscope_-_Mean_-Y"                                         
+[23] "tBody_Gyroscope_-_Mean_-Z"                                         
+[24] "tBody_Gyroscope_-std-X"                                            
+[25] "tBody_Gyroscope_-std-Y"                                            
+[26] "tBody_Gyroscope_-std-Z"                                            
+[27] "tBody_AngularAcceleration-_Mean_-X"                                
+[28] "tBody_AngularAcceleration-_Mean_-Y"                                
+[29] "tBody_AngularAcceleration-_Mean_-Z"                                
+[30] "tBody_AngularAcceleration-std-X"                                   
+[31] "tBody_AngularAcceleration-std-Y"                                   
+[32] "tBody_AngularAcceleration-std-Z"                                   
+[33] "tBody_Accelerometer_Magnitude_-_Mean_"                             
+[34] "tBody_Accelerometer_Magnitude_-std"                                
+[35] "tGravity_Accelerometer_Magnitude_-_Mean_"                          
+[36] "tGravity_Accelerometer_Magnitude_-std"                             
+[37] "tBody_Accelerometer_Jerk_Magnitude_-_Mean_"                        
+[38] "tBody_Accelerometer_Jerk_Magnitude_-std"                           
+[39] "tBody_Gyroscope_Magnitude_-_Mean_"                                 
+[40] "tBody_Gyroscope_Magnitude_-std"                                    
+[41] "tBody_AngularAcceleration_Magnitude_-_Mean_"                       
+[42] "tBody_AngularAcceleration_Magnitude_-std"                          
+[43] "FrequencyDomain_Body_Accelerometer_-_Mean_-X"                      
+[44] "FrequencyDomain_Body_Accelerometer_-_Mean_-Y"                      
+[45] "FrequencyDomain_Body_Accelerometer_-_Mean_-Z"                      
+[46] "FrequencyDomain_Body_Accelerometer_-std-X"                         
+[47] "FrequencyDomain_Body_Accelerometer_-std-Y"                         
+[48] "FrequencyDomain_Body_Accelerometer_-std-Z"                         
+[49] "FrequencyDomain_Body_Accelerometer_-_Mean_Freq-X"                  
+[50] "FrequencyDomain_Body_Accelerometer_-_Mean_Freq-Y"                  
+[51] "FrequencyDomain_Body_Accelerometer_-_Mean_Freq-Z"                  
+[52] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_-X"                  
+[53] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_-Y"                  
+[54] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_-Z"                  
+[55] "FrequencyDomain_Body_Accelerometer_Jerk-std-X"                     
+[56] "FrequencyDomain_Body_Accelerometer_Jerk-std-Y"                     
+[57] "FrequencyDomain_Body_Accelerometer_Jerk-std-Z"                     
+[58] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_Freq-X"              
+[59] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_Freq-Y"              
+[60] "FrequencyDomain_Body_Accelerometer_Jerk-_Mean_Freq-Z"              
+[61] "FrequencyDomain_Body_Gyroscope_-_Mean_-X"                          
+[62] "FrequencyDomain_Body_Gyroscope_-_Mean_-Y"                          
+[63] "FrequencyDomain_Body_Gyroscope_-_Mean_-Z"                          
+[64] "FrequencyDomain_Body_Gyroscope_-std-X"                             
+[65] "FrequencyDomain_Body_Gyroscope_-std-Y"                             
+[66] "FrequencyDomain_Body_Gyroscope_-std-Z"                             
+[67] "FrequencyDomain_Body_Gyroscope_-_Mean_Freq-X"                      
+[68] "FrequencyDomain_Body_Gyroscope_-_Mean_Freq-Y"                      
+[69] "FrequencyDomain_Body_Gyroscope_-_Mean_Freq-Z"                      
+[70] "FrequencyDomain_Body_Accelerometer_Magnitude_-_Mean_"              
+[71] "FrequencyDomain_Body_Accelerometer_Magnitude_-std"                 
+[72] "FrequencyDomain_Body_Accelerometer_Magnitude_-_Mean_Freq"          
+[73] "FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_-_Mean_"     
+[74] "FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_-std"        
+[75] "FrequencyDomain_BodyBody_Accelerometer_Jerk_Magnitude_-_Mean_Freq" 
+[76] "FrequencyDomain_BodyBody_Gyroscope_Magnitude_-_Mean_"              
+[77] "FrequencyDomain_BodyBody_Gyroscope_Magnitude_-std"                 
+[78] "FrequencyDomain_BodyBody_Gyroscope_Magnitude_-_Mean_Freq"          
+[79] "FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_-_Mean_"    
+[80] "FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_-std"       
+[81] "FrequencyDomain_BodyBody_AngularAcceleration_Magnitude_-_Mean_Freq" 
 
+Note: features are normalized and bounded within [-1,1].
